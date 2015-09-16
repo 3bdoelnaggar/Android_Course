@@ -77,8 +77,8 @@ public class DatabaseController {
     public Product getProduct(Long rowId) {
         String[] clumns = {KEY_ID, KEY_NAME, KEY_PRICE};
         Cursor cursor = sqLiteDatabase.query(DATABASE_Table, clumns, KEY_ID + "=" + rowId, null, null, null, null);
-        if (cursor != null) {
-            cursor.moveToFirst();
+        if (cursor != null && cursor.moveToFirst()) {
+
             Product product = new Product();
             product.setName(cursor.getString(cursor.getColumnIndex(KEY_NAME)));
             product.setPrice(cursor.getString(cursor.getColumnIndex(KEY_PRICE)));

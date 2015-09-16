@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -46,7 +47,11 @@ public class ProductActivity extends Activity {
 
     public void onGetProductClick(View view) {
         Product product=databaseController.getProduct(Long.valueOf(id.getText().toString()));
-        show.setText(product.getName()+"   "+product.getPrice()+"\n");
+        if(product!=null) {
+            show.setText(product.getName() + "   " + product.getPrice() + "\n");
+        }else{
+            Toast.makeText(this,"wrong row id",Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void onUpdateProductClick(View view) {
