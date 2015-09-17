@@ -19,4 +19,5 @@
     <string name="title_activity_notification">NotificationActivity</string>
     <string name="title_activity_custom_list">CustomListActivity</string>
     <string name="title_activity_http_connection">HttpConnectionActivity</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
 </resources>

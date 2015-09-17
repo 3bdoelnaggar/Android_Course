@@ -14,8 +14,8 @@ public class Menu extends ListActivity {
     String []classes={"elnaggar.androidcourse.MainActivity","elnaggar.androidcourse.LoginActivity"
             ,"elnaggar.androidcourse.ProductActivity","elnaggar.androidcourse.ActionMenuActivity"
             ,"elnaggar.androidcourse.NotificationActivity","elnaggar.androidcourse.CustomListActivity"
-            ,"elnaggar.androidcourse.HttpConnectionActivity"};
-    String []names={"Dialog","Login Activity","Product Activity","Action Menu","Notification","ListView","Http Connection"};
+            ,"elnaggar.androidcourse.HttpConnectionActivity","elnaggar.androidcourse.DrawerActivity"};
+    String []names={"Dialog","Login Activity","Product Activity","Action Menu","Notification","ListView","Http Connection","Navigation Drawer"};
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {

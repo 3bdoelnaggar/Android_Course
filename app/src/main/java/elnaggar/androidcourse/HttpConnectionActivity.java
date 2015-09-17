@@ -15,7 +15,7 @@ public class HttpConnectionActivity extends Activity {
     public void onClick(View view) {
         if(ConnectionManager.isIntenetConectted(this)) {
             httpTask httpTask = new httpTask(this);
-            httpTask.execute("https://api.github.com/users/3bdoelnaggar");
+            httpTask.execute("http://ava-karas-family.eb2a.com/test/elkdesademyana/all.json");
         }else
             Toast.makeText(this,"Please check internet",Toast.LENGTH_SHORT).show();
 
