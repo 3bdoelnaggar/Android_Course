@@ -42,6 +42,6 @@ public class httpTask extends AsyncTask<String,Void,String> {
         Gson gson=new Gson();
         JSONUser jsonUser=gson.fromJson(s,JSONUser.class);
 
-        Toast.makeText(context,s,Toast.LENGTH_LONG).show();
+        Toast.makeText(context,jsonUser.getEmail(),Toast.LENGTH_LONG).show();
     }
 }
