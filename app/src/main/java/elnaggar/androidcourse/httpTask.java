@@ -4,6 +4,8 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 
@@ -37,8 +39,8 @@ public class httpTask extends AsyncTask<String,Void,String> {
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-//        Gson gson=new Gson();
-//        JSONUser jsonUser=gson.fromJson(s,JSONUser.class);
+        Gson gson=new Gson();
+        JSONUser jsonUser=gson.fromJson(s,JSONUser.class);
 
         Toast.makeText(context,s,Toast.LENGTH_LONG).show();
     }
