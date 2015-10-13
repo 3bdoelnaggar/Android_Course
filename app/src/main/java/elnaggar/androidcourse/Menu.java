@@ -14,8 +14,10 @@ public class Menu extends ListActivity {
     String []classes={"elnaggar.androidcourse.MainActivity","elnaggar.androidcourse.LoginActivity"
             ,"elnaggar.androidcourse.ProductActivity","elnaggar.androidcourse.ActionMenuActivity"
             ,"elnaggar.androidcourse.NotificationActivity","elnaggar.androidcourse.CustomListActivity"
-            ,"elnaggar.androidcourse.HttpConnectionActivity","elnaggar.androidcourse.DrawerActivity"};
-    String []names={"Dialog","Login Activity","Product Activity","Action Menu","Notification","ListView","Http Connection","Navigation Drawer"};
+            ,"elnaggar.androidcourse.HttpConnectionActivity","elnaggar.androidcourse.DrawerActivity"
+    ,"elnaggar.androidcourse.Service"};
+    String []names={"Dialog","Login Activity","Product Activity","Action Menu","Notification","ListView"
+            ,"Http Connection","Navigation Drawer","Service"};
 
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
@@ -24,6 +26,7 @@ public class Menu extends ListActivity {
             Class aClass=Class.forName(classes[position]);
             Intent intent=new Intent(this,aClass);
             startActivity(intent);
+            this.finish();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }

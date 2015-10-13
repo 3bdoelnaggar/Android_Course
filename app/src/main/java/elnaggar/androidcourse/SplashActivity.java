@@ -24,6 +24,7 @@ public class SplashActivity extends Activity {
                 }finally {
                     Intent intent=new Intent(SplashActivity.this,Menu.class);
                     startActivity(intent);
+                    SplashActivity.this.finish();
                 }
             }
         });
