@@ -62,6 +62,18 @@
             android:enabled="true"
             android:exported="true" >
         </service>
+
+        <activity android:name=".BroadCastActivity" >
+        </activity>
+
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="androidcourse.action"></action>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
